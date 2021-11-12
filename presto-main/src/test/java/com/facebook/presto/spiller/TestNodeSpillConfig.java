@@ -37,7 +37,8 @@ public class TestNodeSpillConfig
                 .setQueryMaxSpillPerNode(new DataSize(100, GIGABYTE))
                 .setSpillCompressionEnabled(false)
                 .setSpillEncryptionEnabled(false)
-                .setTempStorageBufferSize(new DataSize(4, KILOBYTE)));
+                .setTempStorageBufferSize(new DataSize(4, KILOBYTE))
+                .setLocalTempStorePath("/tmp/presto/temp_storage"));
     }
 
     @Test
